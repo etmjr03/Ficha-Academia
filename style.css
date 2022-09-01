@@ -15,10 +15,25 @@ body, input {
     width: 100%;
     min-height: 100vh;
     background-color: #fff;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 1500px;
+    height: 1800px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #2f2e41, #fff);
+    top: -90%;
+    right: 60%;
+    transform: translate(10%);
+    z-index: 6;
 }
 
 .forms-container {
+    padding: 20px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,11 +41,35 @@ body, input {
     left: 0;
 }
 
+.treino1-treino2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
 form {
     display: flex;
     align-items: center;
     justify-content: end;
     flex-direction: column;
+    padding: 0 5rem;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+form.form-treino1 {
+    z-index: 2;
+}
+
+form.form-treino2 {
+    z-index: 1;
+    opacity: 0;
 }
 
 .title {
@@ -39,7 +78,7 @@ form {
     margin-bottom: 10px;
 }
 
-.nanda {
+.treino1 {
     max-width: 380px;
     width: 100%;
     height: 50px;
@@ -50,27 +89,35 @@ form {
     padding: 0 .4rem;
 }
 
-.nanda i{
+.treino1 i{
     text-align: center;
     line-height: 55px;
     color: #ff9100;
     font-size: 1.1rem;
 }
 
-.nanda :read-only {
+.treino1 :read-only {
     text-align: center;
 }
 
-.nanda input {
+.treino1 input {
     border: none;
-    background-color: #fff;
+    background-color: #ff9100;
     border-radius: 55px;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #ff9100;
+    color: #fff;
+    width: 260px;
 }
 
-.nanda input:hover {
+.treino1 input:hover {
+    background-color: #fff;
+    border-color: #ff9100;
+    color: #ff9100;
+    cursor: pointer;
+}
+
+.treino1:target {
     background-color: #ff9100;
     border-color: #ff9100;
     color: #fff;
@@ -93,5 +140,141 @@ form {
 }
 
 .btn-solid:hover {
+    background-color: rgb(231, 163, 60);
+}
+
+.btn-solid-treino2 {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #0099ff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    transition: .5s;
+}
+
+.btn-solid-treino2:hover {
+    background-color: #60bbf7;
+}
+
+.mesage-text {
+    padding: .7rem 0;
+    font-size: 1rem;
+    color: #ff9100;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mesage-text-treino2 {
+    padding: .7rem 0;
+    font-size: 1rem;
+    color: #60bbf7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.treino2 {
+    max-width: 380px;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 15% 30%;
+    padding: 0 .4rem;
+}
+
+.treino2 i{
+    text-align: center;
+    line-height: 55px;
+    color: #0099ff;
+    font-size: 1.1rem;
+}
+
+.treino2 :read-only {
+    text-align: center;
+}
+
+.treino2 input {
+    border: none;
     background-color: #fff;
+    border-radius: 55px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0099ff;
+}
+
+.treino2 input:hover {
+    background-color: #0099ff;
+    border-color: #0099ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.panels-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+
+.left-panel {
+    pointer-events: all;
+    padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel {
+    pointer-events: none;
+    padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content {
+    color: #fff;
+}
+
+.panel h3 {
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+
+.panel p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+
+.btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+}
+
+.right-panel .content, .right-panel .img {
+    transform: translateX(800px);
 }
