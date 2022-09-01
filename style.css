@@ -25,11 +25,12 @@ body, input {
     width: 1500px;
     height: 1800px;
     border-radius: 50%;
-    background: linear-gradient(-45deg, #2f2e41, #fff);
+    background: linear-gradient(-45deg, #ff9100, #fff);
     top: -90%;
     right: 60%;
     transform: translate(10%);
     z-index: 6;
+    transition: 1.8s ease-in-out;
 }
 
 .forms-container {
@@ -245,6 +246,7 @@ form.form-treino2 {
 
 .panel .content {
     color: #fff;
+    tra
 }
 
 .panel h3 {
@@ -277,4 +279,12 @@ form.form-treino2 {
 
 .right-panel .content, .right-panel .img {
     transform: translateX(800px);
+}
+
+/* EFEITOS JS */
+
+.container.treino2-mode::before {
+    transform: translate(100%, 50%);
+    right: 52%;
+    background: linear-gradient(-45deg, #fff, #0099ff);
 }
