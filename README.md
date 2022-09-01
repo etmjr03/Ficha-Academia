@@ -1,6 +1,12 @@
-# Ficha-Academia
+# Ficha de exercícios academia
 
 <h2>Ficha interativa para utilizar nos treinos da academia</h2>
+
+<div align="left">
+  <img height="200" src="https://media1.tenor.com/images/fe4fc717e6f2292ba9a01873d1d9a41b/tenor.gif?itemid=10914385"  />
+</div>
+
+###
 
 <p>A proposta é desenvolver uma ficha online contendo os exercícios dos treinos realizados na academia,<br>
 o intúito principal é deixar o conceito de fichas convencionais para trás e utilizar em seu celular<br>
