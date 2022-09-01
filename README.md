@@ -10,8 +10,12 @@
 
 <p>A proposta é desenvolver uma ficha online contendo os exercícios dos treinos realizados na academia,<br>
 o intúito principal é deixar o conceito de fichas convencionais para trás e utilizar em seu celular<br>
-uma lista de exercícios com funcionalidades, como tempo de execução, mapa dos aparelhos e quem sabe até um<br>
-joguinho para passar no tempo durante o descanço?!
+uma lista de exercícios com funcionalidades dinamicas como:<br><br>
+<b>
+- tempo de execução de atividades ⌚<br>
+- mapa dos aparelhos 🗺️<br>
+- e quem sabe até um joguinho para passar no tempo durante os intervalos de séries e descanço?! 🎮
+</b>
 </p>
 
 ###
